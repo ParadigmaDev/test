@@ -1,0 +1,14 @@
+{{ form_start(form) }}
+<div class="form-group">
+    {{ form_row(form.quote, {attr: {class: 'form-control'}}) }}
+</div>
+<div class="form-group">
+    {{ form_row(form.type, {attr: {class: 'form-control'}}) }}
+    <small id="emailHelp" class="form-text text-muted">If the required type is not in the list - enter the type name and press the "Enter" button</small>
+</div>
+<div class="form-group">
+    {{ form_row(form.author, {attr: {class: 'form-control'}}) }}
+    <small id="emailHelp" class="form-text text-muted">If the required author is not in the list - enter the author name and press the "Enter" button</small>
+</div>
+<button class="btn btn-primary">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

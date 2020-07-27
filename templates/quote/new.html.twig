@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Quote{% endblock %}
+
+{% block body %}
+    <h1>Create new Quote</h1>
+
+    {{ include('quote/_form.html.twig') }}
+
+    <a href="{{ path('quote_index') }}" class="btn btn-link">back to list</a>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $("#quote_author").select2({
+            tags: true
+        });
+        $("#quote_type").select2({
+            tags: true,
+            tokenSeparators: [',', ' ']
+        })
+    </script>
+{% endblock %}

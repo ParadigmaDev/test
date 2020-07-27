@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Quote{% endblock %}
+
+{% block body %}
+    <h1>Quote</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Quote</th>
+                <td>{{ quote.quote }}</td>
+            </tr>
+            <tr>
+                <th>Author</th>
+                <td>{{ quote.author }}</td>
+            </tr>
+            <tr>
+                <th>Types</th>
+                <td>{{ quote.type|join(', ') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('quote_index') }}" class="btn btn-link">back to list</a>
+
+    <a href="{{ path('quote_edit', {'id': quote.id}) }}" class="btn btn-warning">edit</a>
+
+    {{ include('quote/_delete_form.html.twig') }}
+{% endblock %}
