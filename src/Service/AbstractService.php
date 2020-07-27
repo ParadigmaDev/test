@@ -4,7 +4,7 @@ namespace App\Service;
 
 use Doctrine\ORM\EntityManagerInterface;
 
-class AbstractService
+abstract class AbstractService
 {
 
     protected EntityManagerInterface $em;
