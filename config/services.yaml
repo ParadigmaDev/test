@@ -29,3 +29,12 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\Service\AbstractService:
+        abstract:  true
+
+    App\Service\QuoteTypeService:
+        parent: App\Service\AbstractService
+
+    App\Service\AuthorService:
+        parent: App\Service\AbstractService
